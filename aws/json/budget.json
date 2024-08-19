@@ -1,0 +1,11 @@
+aws sns subscribe --topic-arn="arn:aws:sns:eu-central-1:026090546492:billing-alarm" \
+--protocol=email \
+--notification-endpoint=konzismauel@gmail.com
+
+aws sns subscribe \
+    --topic-arn="arn:aws:sns:eu-central-1:026090546492:billing-alarm" \
+    --protocol=email \
+    --notification-endpoint=konzisamuel@gmail.com
+
+
+aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
